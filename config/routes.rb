@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   scope path: '/nba_api' do
+    resources :docs, only: [:index], path: '/swagger'
+
     scope path: '/v1' do
       # your routes go here
     end

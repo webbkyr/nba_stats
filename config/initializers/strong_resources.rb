@@ -31,4 +31,11 @@
 #
 # For additional documentation, see https://jsonapi-suite.github.io/strong_resources
 StrongResources.configure do
+  strong_resource :team do
+    attribute :name, :string
+    attribute :city, :string
+    attribute :state, :string
+    attribute :team_id, :integer
+    attribute :conference, :string
+  end
 end

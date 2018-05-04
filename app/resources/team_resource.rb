@@ -15,11 +15,11 @@ class TeamResource < ApplicationResource
   # allow_stat total: [:count]
   #
   # === Allow sideloading/sideposting of relationships ===
-  # belongs_to :foo,
-  #   foreign_key: :foo_id,
-  #   resource: FooResource,
-  #   scope: -> { Foo.all }
-  #
+  has_many :players,
+    foreign_key: :player_id,
+    resource: PlayerResource,
+    scope: -> { Player.all }
+  
   # === Custom sorting logic ===
   # sort do |scope, att, dir|
   #   ... code ...
